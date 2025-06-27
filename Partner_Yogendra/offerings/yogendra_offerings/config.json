@@ -1,0 +1,39 @@
+{
+    "name": "yogendra_offerings",
+    "domain": "HR",
+    "publisher": "IBM",
+    "version": "1.9.1",
+    "description": "Simplify core HR operations, improve workforce productivity, and enhance employee experiences faster with pre-built AI Agents for Employee Support with Oracle HCM. These agents coordinate and engage with employees and managers to reduce time spent on repetitive tasks and provide instant, accurate responses across use cases like absence leave, compensation history, employee profile data and more.",
+    "assets": {
+        "IBM": {
+            "agents": [
+                "yogendra_google_drive_file_management_agent"
+            ],
+            "tools": [
+                "yogendra_add_a_comment",
+                "yogendra_add_a_comment_google_drive",
+                "yogendra_add_list_item"
+            ]
+        }
+    },
+    "part_number": {
+        "aws": "D11BQZX",
+        "ibm_cloud": "D10P0ZX",
+        "cp4d": null
+    },
+    "scope": {
+        "form_factor": {
+            "aws": "free",
+            "ibm_cloud": "free",
+            "cp4d": "free"
+        },
+        "tenant_type": {
+            "trial": "free"
+        }
+    },
+    "pricing": {
+        "currency": "USD",
+        "amount": "100.00",
+        "frequency": "monthly"
+    }
+}
