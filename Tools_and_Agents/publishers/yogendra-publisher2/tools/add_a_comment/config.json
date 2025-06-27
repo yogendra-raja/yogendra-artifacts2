@@ -1,0 +1,47 @@
+{
+    "name": "yogendra_add_a_comment",
+    "description": "Add a comment to a file",
+    "permission": "read_only",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "file_id": {
+                "type": "string",
+                "title": "File Id"
+            },
+            "comment": {
+                "type": "string",
+                "title": "Comment"
+            }
+        },
+        "required": ["file_id", "comment"]
+    },
+    "output_schema": {
+        "type": "object",
+        "description": "The result from performing the add a comment.",
+        "properties": {
+            "comment_id": {
+                "type": "string",
+                "title": "Comment Id"
+            },
+            "comment": {
+                "type": "string",
+                "title": "Comment"
+            }
+        },
+        "required": ["comment_id", "comment"],
+        "title": "AddACommentResult"
+    },
+    "binding": {
+        "python": {
+            "function": "agent_ready_tools.tools.productivity.box.add_a_comment:add_a_comment"
+        }
+    },
+    "category": "tool",
+    "tags": ["Productivity"],
+    "applications": [
+        {
+            "app_id": "box_key_value_ibm_184bdbd3"
+        }
+    ]
+}

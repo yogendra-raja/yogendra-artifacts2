@@ -1,0 +1,47 @@
+{
+    "name": "yogendra_add_list_item",
+    "description": "Add a new item in an existing list",
+    "permission": "read_only",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "site_id": {
+                "type": "string",
+                "title": "Site Id"
+            },
+            "list_id": {
+                "type": "string",
+                "title": "List Id"
+            },
+            "title": {
+                "type": "string",
+                "title": "Title"
+            }
+        },
+        "required": ["site_id", "list_id", "title"]
+    },
+    "output_schema": {
+        "type": "object",
+        "description": "The title of the created list item.",
+        "properties": {
+            "title": {
+                "type": "string",
+                "title": "Title"
+            }
+        },
+        "required": ["title"],
+        "title": "AddListItemResponse"
+    },
+    "binding": {
+        "python": {
+            "function": "agent_ready_tools.tools.productivity.sharepoint.add_list_item:add_list_item"
+        }
+    },
+    "category": "tool",
+    "tags": ["Productivity"],
+    "applications": [
+        {
+            "app_id": "microsoft_key_value_ibm_184bdbd3"
+        }
+    ]
+}

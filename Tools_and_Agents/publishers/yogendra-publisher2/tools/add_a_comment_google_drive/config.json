@@ -1,0 +1,43 @@
+{
+    "name": "yogendra_add_a_comment_google_drive",
+    "description": "User can add comments to the file",
+    "permission": "read_only",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "file_id": {
+                "type": "string",
+                "title": "File Id"
+            },
+            "content": {
+                "type": "string",
+                "title": "Content"
+            }
+        },
+        "required": ["file_id", "content"]
+    },
+    "output_schema": {
+        "type": "object",
+        "description": "The content of the added comment.",
+        "properties": {
+            "content": {
+                "type": "string",
+                "title": "Content"
+            }
+        },
+        "required": ["content"],
+        "title": "AddACommentResponse"
+    },
+    "binding": {
+        "python": {
+            "function": "agent_ready_tools.tools.productivity.google_drive.add_a_comment_google_drive:add_a_comment_google_drive"
+        }
+    },
+    "category": "tool",
+    "tags": ["Productivity"],
+    "applications": [
+        {
+            "app_id": "google_key_value_ibm_184bdbd3"
+        }
+    ]
+}
